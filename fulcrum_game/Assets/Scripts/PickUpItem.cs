@@ -2,11 +2,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using TMPro;
 
 public class PickUpItem : MonoBehaviour
 {
     [SerializeField]
     LayerMask targetLayer;
+    [SerializeField]
+    TextMeshProUGUI itemText;
 
     public List<GameObject> inventory;
     Camera thisCamera;
@@ -34,5 +37,17 @@ public class PickUpItem : MonoBehaviour
             }
         }
 
+    }
+
+    private void Update()
+    {
+        if(inventory.Count != 0)
+        {
+            itemText.text = "Item in Inventory";
+        }
+        else
+        {
+            itemText.text = "";
+        }
     }
 }

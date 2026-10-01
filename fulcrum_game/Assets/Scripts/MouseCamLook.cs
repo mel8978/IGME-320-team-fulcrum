@@ -32,7 +32,7 @@ public class MouseCamLook : MonoBehaviour
         // the interpolated float result between the two float values
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         // locking y axis so comment this out
-        // smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
+        smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         // incrementally add to the camera look
         mouseLook += smoothV;
 
