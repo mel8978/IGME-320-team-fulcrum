@@ -2,12 +2,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using TMPro;
 
 public class PickUpItem : MonoBehaviour
 {
     [SerializeField]
     LayerMask targetLayer;
+    [SerializeField]
+    TextMeshProUGUI itemText;
 
+    public List<GameObject> inventory;
     Camera thisCamera;
 
     private void Awake()
@@ -18,21 +22,32 @@ public class PickUpItem : MonoBehaviour
 
     public void OnFire(InputAction.CallbackContext context)
     {
-        Debug.Log("pressed fire");
         if (context.phase == InputActionPhase.Canceled)
         {
             Ray raycast = thisCamera.ScreenPointToRay(Mouse.current.position.value);
             RaycastHit hit;
 
-            Debug.Log("pressed fire");
             //transform.position, transform.forward
             if (Physics.Raycast(raycast, out hit, 20, targetLayer))
             {
                 Debug.Log("Hit");
                 GameObject obj = hit.collider.gameObject;
+                inventory.Add(obj);
                 obj.SetActive(false);
             }
         }
 
+    }
+
+    private void Update()
+    {
+        if(inventory.Count != 0)
+        {
+            itemText.text = "Item in Inventory";
+        }
+        else
+        {
+            itemText.text = "";
+        }
     }
 }
