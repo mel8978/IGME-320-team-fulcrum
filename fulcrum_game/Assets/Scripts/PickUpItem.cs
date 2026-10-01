@@ -7,7 +7,11 @@ using TMPro;
 public class PickUpItem : MonoBehaviour
 {
     [SerializeField]
-    LayerMask targetLayer;
+    LayerMask targetLayer1;
+
+    [SerializeField]
+    LayerMask targetLayer2;
+
     [SerializeField]
     TextMeshProUGUI itemText;
 
@@ -28,12 +32,20 @@ public class PickUpItem : MonoBehaviour
             RaycastHit hit;
 
             //transform.position, transform.forward
-            if (Physics.Raycast(raycast, out hit, 20, targetLayer))
+            if (Physics.Raycast(raycast, out hit, 20, targetLayer1))
             {
-                Debug.Log("Hit");
+                Debug.Log("Hit Item");
                 GameObject obj = hit.collider.gameObject;
                 inventory.Add(obj);
                 obj.SetActive(false);
+            }
+
+            //transform.position, transform.forward
+            if (Physics.Raycast(raycast, out hit, 20, targetLayer2))
+            {
+                Debug.Log("Hit NPC");
+                GameObject obj = hit.collider.gameObject;
+                inventory.Remove(inventory[inventory.Count-1]);
             }
         }
 
