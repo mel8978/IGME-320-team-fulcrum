@@ -8,6 +8,7 @@ public class PickUpItem : MonoBehaviour
     [SerializeField]
     LayerMask targetLayer;
 
+    public List<GameObject> inventory;
     Camera thisCamera;
 
     private void Awake()
@@ -18,18 +19,17 @@ public class PickUpItem : MonoBehaviour
 
     public void OnFire(InputAction.CallbackContext context)
     {
-        Debug.Log("pressed fire");
         if (context.phase == InputActionPhase.Canceled)
         {
             Ray raycast = thisCamera.ScreenPointToRay(Mouse.current.position.value);
             RaycastHit hit;
 
-            Debug.Log("pressed fire");
             //transform.position, transform.forward
             if (Physics.Raycast(raycast, out hit, 20, targetLayer))
             {
                 Debug.Log("Hit");
                 GameObject obj = hit.collider.gameObject;
+                inventory.Add(obj);
                 obj.SetActive(false);
             }
         }
