@@ -15,6 +15,8 @@ public class MouseCamLook : MonoBehaviour
     // smooth the mouse moving
     private Vector2 smoothV;
 
+    private Camera camera;
+
     // Use this for initialization
     void Start()
     {
