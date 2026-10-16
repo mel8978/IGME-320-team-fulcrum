@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
@@ -65,5 +66,13 @@ public class PlayerController : MonoBehaviour
             vel.y = jumpSpeed;
             rb.linearVelocity = vel;
         }
+    }
+
+    public void ResetScene(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }   
     }
 }
