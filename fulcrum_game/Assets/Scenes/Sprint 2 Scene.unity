@@ -150,11 +150,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259285271}
+        m_TargetAssemblyTypeName: NewCharacterController, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3b6c054e-5fd0-422a-950a-c00066e8693b
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259285271}
+        m_TargetAssemblyTypeName: NewCharacterController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f29ff1df-e72c-481a-805d-0711f67fd9ba
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
@@ -213,11 +237,35 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 10394119-e98c-4683-97d0-540f0ef4ed65
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8f85312f-9d7d-4289-8c2f-1d18750a802d
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &259285271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259285263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0598ee9e834d14145a7919dd0e0e76c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NewCharacterController
+  moveSpeed: 10
+  jumpSpeed: 7
+  fallMultiplier: 2.5
+  lookSens: {x: 0.1, y: 0.1}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 136
+  groundCheckDistance: 1.1
 --- !u!1 &316697683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1721,13 +1769,25 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4708746227940351148, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5457410882709035386, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5457410882709035386, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       propertyPath: m_Constraints
       value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457410882709035386, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_LinearDamping
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5457410882709035386, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_AngularDamping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6374882383028023572, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       propertyPath: m_Enabled
@@ -1757,6 +1817,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -135
       objectReference: {fileID: 0}
+    - target: {fileID: 8933596685716866867, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1764,6 +1828,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 270643372471341730, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       insertIndex: -1
       addedObject: {fileID: 259285270}
+    - targetCorrespondingSourceObject: {fileID: 270643372471341730, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 259285271}
     - targetCorrespondingSourceObject: {fileID: 2502257023710851685, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1681174045}
