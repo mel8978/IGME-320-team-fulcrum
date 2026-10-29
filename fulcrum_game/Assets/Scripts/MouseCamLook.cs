@@ -36,6 +36,9 @@ public class MouseCamLook : MonoBehaviour
         // incrementally add to the camera look
         mouseLook += smoothV;
 
+        // clamp vertical look
+        mouseLook.y = Mathf.Clamp(mouseLook.y, -80f, 80f);
+
         // vector3.right means the x-axis
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
