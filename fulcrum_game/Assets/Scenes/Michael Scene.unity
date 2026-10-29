@@ -131,7 +131,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259285263}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -150,11 +150,35 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259285271}
+        m_TargetAssemblyTypeName: NewCharacterController, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3b6c054e-5fd0-422a-950a-c00066e8693b
     m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 259285271}
+        m_TargetAssemblyTypeName: NewCharacterController, Assembly-CSharp
+        m_MethodName: OnLook
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f29ff1df-e72c-481a-805d-0711f67fd9ba
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
@@ -218,6 +242,27 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &259285271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259285263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0598ee9e834d14145a7919dd0e0e76c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  yOffset: 1
+  mouseSens: {x: 1, y: 1}
+  rotationSpeed: 100
+  moveSpeed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 119
+  jumpForce: 100
+  fallForce: 5
 --- !u!1 &316697683
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,8 +868,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4708746227940351148, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5457410882709035386, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933596685716866867, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -835,6 +888,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 270643372471341730, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       insertIndex: -1
       addedObject: {fileID: 259285270}
+    - targetCorrespondingSourceObject: {fileID: 270643372471341730, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 259285271}
     - targetCorrespondingSourceObject: {fileID: 2502257023710851685, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1681174045}

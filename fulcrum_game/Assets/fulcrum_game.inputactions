@@ -37,13 +37,23 @@
                     "priority": 0
                 },
                 {
-                    "name": "Scroll",
-                    "type": "Value",
-                    "id": "89826d96-dd2a-401b-9e42-dcfff8fc6059",
-                    "expectedControlType": "Vector2",
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "8f85312f-9d7d-4289-8c2f-1d18750a802d",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true,
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "e49abed9-3854-492b-b3c9-f3cdda07d542",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
                     "priority": 0
                 }
             ],
@@ -270,12 +280,23 @@
                 },
                 {
                     "name": "",
-                    "id": "b3441872-a9c3-4bec-879c-36d2ff4645a0",
-                    "path": "<Mouse>/scroll",
+                    "id": "576410f7-24cc-4158-a28c-9cf4e7dd4ea5",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "080781ce-be76-4220-8ed3-e275a997b00e",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Scroll",
+                    "action": "Reset",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
