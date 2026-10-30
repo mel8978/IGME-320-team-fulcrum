@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetButtonDown("Inventory") && menuActivated)
         {
             // activates
@@ -31,6 +33,27 @@ public class InventoryManager : MonoBehaviour
             //Time.timeScale = 0;
             InventoryMenu.SetActive(true);
             menuActivated = true;
+        } */
+    }
+
+    public void OpenInventory(InputAction.CallbackContext context)
+    {
+        if (context.phase == InputActionPhase.Canceled)
+        {
+            if (menuActivated)
+            {
+                // activates
+                Time.timeScale = 1;
+                InventoryMenu.SetActive(false);
+                menuActivated = false;
+            }
+            else if (!menuActivated)
+            {
+                // deactivates
+                Time.timeScale = 0;
+                InventoryMenu.SetActive(true);
+                menuActivated = true;
+            }
         }
     }
 
@@ -47,11 +70,13 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
+        Debug.Log("InventoryManager.AddItem");
         for (int i = 0; i < itemSlots.Length; i++)
         {
             if (itemSlots[i].isFull == false)
             {
                 itemSlots[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                Debug.Log("item added");
                 return;
             }
         }

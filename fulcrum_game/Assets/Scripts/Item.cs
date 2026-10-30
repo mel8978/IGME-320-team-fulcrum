@@ -16,13 +16,14 @@ public class Item : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("hit");
             inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
             Destroy(gameObject);
         }
