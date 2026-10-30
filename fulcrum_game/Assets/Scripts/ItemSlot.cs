@@ -26,16 +26,25 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     
     void Start()
     {
-        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
     }
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
+        Debug.Log("ItemSlot.AddItem");
         this.itemName = itemName;
         this.quantity = quantity;
         this.itemSprite = itemSprite;
         this.itemDescription = itemDescription;
 
         itemImage.sprite = itemSprite;
+
+        // placeholder
+        thisItemSelected = true;
+        ItemNameText.text = itemName;
+        ItemDescriptionText.text = itemDescription;
+        ItemDescriptionImage.sprite = itemSprite;
+        if (ItemDescriptionImage.sprite == null)
+            ItemDescriptionImage.sprite = emptySprite;  
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -52,8 +61,10 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnLeftClick()
     {
+        // use item on double click
         if (thisItemSelected)
             inventoryManager.UseItem(itemName);
+
         inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
         thisItemSelected = true;
