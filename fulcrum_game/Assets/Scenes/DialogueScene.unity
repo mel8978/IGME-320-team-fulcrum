@@ -2408,6 +2408,10 @@ MonoBehaviour:
   - Almost there.
   - Last line of dialogue
   textSpeed: 0.025
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerCamera: {fileID: 1681174048}
 --- !u!1 &1092967348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,6 +3151,11 @@ MonoBehaviour:
     m_Bits: 64
   itemText: {fileID: 0}
   inventory: []
+--- !u!20 &1681174048 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5695674445560437733, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+  m_PrefabInstance: {fileID: 729745166055462910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1739363339
 GameObject:
   m_ObjectHideFlags: 0
