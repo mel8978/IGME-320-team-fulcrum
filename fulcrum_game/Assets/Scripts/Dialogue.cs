@@ -14,28 +14,43 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     float textSpeed;
 
+    [SerializeField]
+    LayerMask npcLayer;
+    [SerializeField]
+    Camera playerCamera;
+
     private int index;
+    private bool active = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         textComponent.text = string.Empty;
-        StartDialogue();
     }
 
     // Update is called once per frame
     public void PressDialogue(InputAction.CallbackContext context)
     {
-        if(context.performed)
+        Ray raycast = playerCamera.ScreenPointToRay(Mouse.current.position.value);
+        RaycastHit hit;
+
+        if (context.performed && Physics.Raycast(raycast, out hit, 20, npcLayer))
         {
-            if (textComponent.text == lines[index])
+            if(gameObject.activeSelf)
             {
-                NextLine();
+                if (textComponent.text == lines[index])
+                {
+                    NextLine();
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    textComponent.text = lines[index];
+                }
             }
             else
             {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
+                StartDialogue();
             }
         }
     }
@@ -43,6 +58,7 @@ public class Dialogue : MonoBehaviour
     void StartDialogue()
     {
         index = 0;
+        gameObject.SetActive(true);
         StartCoroutine(TypeLine());
     }
 
@@ -66,6 +82,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
+            active = false;
         }
     }
 }
