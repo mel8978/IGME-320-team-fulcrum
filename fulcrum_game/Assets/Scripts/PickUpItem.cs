@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.PackageManager;
+//using UnityEditor.PackageManager;
 
 public class PickUpItem : MonoBehaviour
 {
@@ -46,15 +46,10 @@ public class PickUpItem : MonoBehaviour
             {
                 Debug.Log("Hit NPC");
                 GameObject obj = hit.collider.gameObject;
-                try
+                if(inventory.Count!=0)
                 {
-                    inventory.Remove(inventory[inventory.Count-1]);
-                }
-                catch (System.Exception e)
-                {
-                    Debug.Log(e);
-                }
-               
+                    inventory.Remove(inventory[inventory.Count-1]);  
+                }          
             }
         }
 

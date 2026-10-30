@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -33,6 +35,14 @@ public class CharacterController : MonoBehaviour
         {
             // turn on the cursor
             Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
+    public void ResetScene(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

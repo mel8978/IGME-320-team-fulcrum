@@ -15,12 +15,14 @@ public class Dialogue : MonoBehaviour
     float textSpeed;
 
     [SerializeField]
+    PickUpItem itemScript;
+
+    [SerializeField]
     LayerMask npcLayer;
     [SerializeField]
     Camera playerCamera;
 
     private int index;
-    private bool active = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,8 +61,18 @@ public class Dialogue : MonoBehaviour
     {
         index = 0;
         textComponent.text = string.Empty;
+
+        if(itemScript.inventory.Count == 0)
+        {
+            lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! "};
+        }
+        else
+        {
+            lines = new[] { "Thanks so much!" };
+        }
         gameObject.SetActive(true);
         StartCoroutine(TypeLine());
+        
     }
 
     IEnumerator TypeLine()
