@@ -5,14 +5,15 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class InventoryHotbar : MonoBehaviour
+public class InventoryMenu : MonoBehaviour
 {
     // Number of item boxes in the hotbar
     [SerializeField] private int numItems;
 
     // Holds prefab for the item boxes in the hotbar
     [SerializeField] private GameObject itemBoxPrefab;
-    [SerializeField] private GameObject itemSelector;
+    // Holds reference to grid layout
+    [SerializeField] private GameObject itemBoxGrid;
 
     // Holds a reference to all item boxes in the hotbar
     private List<GameObject> itemBoxes;
@@ -27,7 +28,7 @@ public class InventoryHotbar : MonoBehaviour
         // Add numItems number of item boxes to the itemBoxes list, and assign as a child
         for (int i = 0; i < numItems; i++)
         {
-            GameObject itemBox = Instantiate(itemBoxPrefab, transform);
+            GameObject itemBox = Instantiate(itemBoxPrefab, itemBoxGrid.transform);
             itemBoxes.Add(itemBox);
         }
 
@@ -42,32 +43,12 @@ public class InventoryHotbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float scrollY = Input.mouseScrollDelta.y;
-
-        if (scrollY > 0f)
-        {
-            selectedIndex++;
-            if (selectedIndex > numItems - 1)
-            {
-                selectedIndex = 0;
-            }
-            UpdateSelected();
-        }
-        else if (scrollY < 0f)
-        {
-            selectedIndex--;
-            if (selectedIndex < 0)
-            {
-                selectedIndex = numItems - 1;
-            }
-            UpdateSelected();
-        }
+        // Add game logic here
     }
 
     private void UpdateSelected()
     {
-        Vector3 targetPosition = itemBoxes[selectedIndex].transform.position;
-        itemSelector.transform.position = targetPosition;
+        // Add behavior for re-selecting inventory items here
     }
 
     public int GetSelectedIndex()
