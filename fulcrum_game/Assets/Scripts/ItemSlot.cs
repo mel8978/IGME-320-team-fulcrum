@@ -44,7 +44,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         ItemDescriptionText.text = itemDescription;
         ItemDescriptionImage.sprite = itemSprite;
         if (ItemDescriptionImage.sprite == null)
-            ItemDescriptionImage.sprite = emptySprite;
+            ItemDescriptionImage.sprite = emptySprite;  
     }
 
     public void OnPointerClick(PointerEventData eventData)
