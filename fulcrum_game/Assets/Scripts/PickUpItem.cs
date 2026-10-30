@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 //using UnityEditor.PackageManager;
 
 public class PickUpItem : MonoBehaviour
@@ -13,11 +14,11 @@ public class PickUpItem : MonoBehaviour
     [SerializeField]
     LayerMask targetLayer2;
 
-    [SerializeField]
-    TextMeshProUGUI itemText;
-
     public List<GameObject> inventory;
     Camera thisCamera;
+
+    [SerializeField]
+    Image cheese;
 
     private void Awake()
     {
@@ -59,11 +60,12 @@ public class PickUpItem : MonoBehaviour
     {
         if(inventory.Count != 0)
         {
-            itemText.text = "Item in Inventory";
+
+            cheese.enabled = true;
         }
         else
         {
-            itemText.text = "";
+            cheese.enabled = false;
         }
     }
 }
