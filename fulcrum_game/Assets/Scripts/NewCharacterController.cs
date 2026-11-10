@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputAction.CallbackContext context)
     {
+        // Return early if menu is open
+        if (Cursor.lockState != CursorLockMode.Locked) return;
+
+        // Otherwise, look
         Vector2 look = context.ReadValue<Vector2>();
 
         transform.Rotate(0f, look.x * lookSens.x, 0f);
