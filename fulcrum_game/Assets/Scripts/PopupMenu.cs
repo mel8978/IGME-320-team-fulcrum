@@ -40,4 +40,6 @@ public class PopupMenu : MonoBehaviour
             Cursor.visible = true;
         }
     }
+
+    public static void ResetCount() { openMenus = 0; }
 }

@@ -5,6 +5,11 @@ public class DefaultCanvasMenuManager : MonoBehaviour
     [SerializeField] private PopupMenu pauseMenu;
     [SerializeField] private PopupMenu inventoryMenu;
 
+    // Reset number of menus on awake
+    void Awake() 
+    {
+        PopupMenu.ResetCount();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
