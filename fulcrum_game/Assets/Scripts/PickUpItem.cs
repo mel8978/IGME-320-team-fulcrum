@@ -57,8 +57,10 @@ public class PickUpItem : MonoBehaviour
     }
 
     private void Update()
-    {
-        if(inventory.Count != 0)
+    {       
+        if (cheese == null) return;  // handle bug when there is no cheese in scene
+
+        if (inventory.Count != 0)
         {
 
             cheese.enabled = true;

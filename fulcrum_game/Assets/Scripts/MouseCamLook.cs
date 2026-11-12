@@ -26,6 +26,11 @@ public class MouseCamLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Return early if menu is open
+        if (Cursor.lockState != CursorLockMode.Locked) return;
+
+        // Otherwise, look
+
         // md is mosue delta
         Vector2 md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));

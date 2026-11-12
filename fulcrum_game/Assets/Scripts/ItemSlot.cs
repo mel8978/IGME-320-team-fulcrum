@@ -26,7 +26,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     
     void Start()
     {
-        inventoryManager = GameObject.Find("Inventory Canvas").GetComponent<InventoryManager>();
+        inventoryManager = FindFirstObjectByType<InventoryManager>();
     }
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
