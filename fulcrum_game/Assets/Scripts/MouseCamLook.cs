@@ -32,7 +32,7 @@ public class MouseCamLook : MonoBehaviour
         // Otherwise, look
 
         // md is mosue delta
-        Vector2 md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+        Vector2 md = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
         // the interpolated float result between the two float values
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
