@@ -4,6 +4,7 @@ public class DefaultCanvasMenuManager : MonoBehaviour
 {
     [SerializeField] private PopupMenu pauseMenu;
     [SerializeField] private PopupMenu inventoryMenu;
+    [SerializeField] private GameObject hotbar;
 
     // Reset number of menus on awake
     void Awake() 
@@ -23,11 +24,27 @@ public class DefaultCanvasMenuManager : MonoBehaviour
         // Use old input system to open menus
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseMenu.OpenMenu();
+            if(pauseMenu.gameObject.activeSelf == false)
+            {
+                pauseMenu.OpenMenu();
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            inventoryMenu.OpenMenu();
+            if (inventoryMenu.gameObject.activeSelf == false)
+            {
+                inventoryMenu.OpenMenu();
+                hotbar.SetActive(false);
+            }
+            
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            if(inventoryMenu.gameObject.activeSelf == false && hotbar.activeSelf == false)
+            {
+                hotbar.SetActive(true);
+            }
         }
     }
 }
