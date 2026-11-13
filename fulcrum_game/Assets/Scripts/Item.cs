@@ -38,7 +38,7 @@ public class Item : MonoBehaviour
             {
                 Debug.Log("Hit Item");
                 GameObject obj = hit.collider.gameObject;
-                inventoryManager.AddItem(itemName, 1, sprite, "This is cheese");
+                inventoryManager.AddItem(itemName, 1, sprite, itemDescription);
                 obj.SetActive(false);
             }
         }
