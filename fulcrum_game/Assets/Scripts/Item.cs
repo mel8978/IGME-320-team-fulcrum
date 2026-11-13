@@ -44,14 +44,4 @@ public class Item : MonoBehaviour
         }
 
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("hit");
-            inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
-            Destroy(gameObject);
-        }
-    }
 }
