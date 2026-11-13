@@ -3575,6 +3575,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2520813485388530314, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      propertyPath: m_TagString
+      value: Cheese
+      objectReference: {fileID: 0}
     - target: {fileID: 7665821953462365509, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3635,8 +3639,9 @@ MonoBehaviour:
   textComponent: {fileID: 903379547}
   nameLabel: {fileID: 694116931}
   lines: []
-  textSpeed: 0.25
+  textSpeed: 0.05
   itemScript: {fileID: 1939982713}
+  inv: {fileID: 2087281055}
   npcLayer:
     serializedVersion: 2
     m_Bits: 64

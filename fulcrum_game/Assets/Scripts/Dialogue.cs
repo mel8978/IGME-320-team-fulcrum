@@ -16,9 +16,13 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     float textSpeed;
 
+    string tag;
+    bool givenCheese = false;
+
     [SerializeField]
     PickUpItem itemScript;
-    private bool givenCheese = false;
+    [SerializeField]
+    InventoryManager inv;
 
     [SerializeField]
     LayerMask npcLayer;
@@ -57,13 +61,11 @@ public class Dialogue : MonoBehaviour
             {
                 if(hit.collider.gameObject.tag == "Brunhilde")
                 {
-                    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
-                    nameLabel.text = "Brunhilde";
+                    tag = "Brunhilde";
                 }
                 else if(hit.collider.gameObject.tag == "DragonRider")
                 {
-                    lines = new[] { "Yo, I'm a Dragon Rider!", "Don't feel like talking to you right now! " };
-                    nameLabel.text = "Dragon Rider";
+                    tag = "DragonRider";
                 }
                 StartDialogue();
             }
@@ -76,19 +78,29 @@ public class Dialogue : MonoBehaviour
         index = 0;
         textComponent.text = string.Empty;
 
-        //if (itemScript.inventory.Count == 0 && !givenCheese)
-        //{
-        //    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
-        //}
-        //else if (givenCheese)
-        //{
-        //    lines = new[] { "That cheese was delicious! " };
-        //}
-        //else
-        //{
-        //    lines = new[] { "Thanks so much!" };
-        //    givenCheese = true;
-        //}
+        if (tag == "Brunhilde")
+        {
+            if(inv.FindItem("Cheese") && !givenCheese)
+            {
+                lines = new[] { "Woah, thanks for the Cheese!" };
+                givenCheese = true;
+            }
+            else if(givenCheese)
+            {
+                lines = new[] { "Thanks again for the cheese!" };
+            }
+            else
+            {
+                lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
+            }
+            nameLabel.text = "Brunhilde";
+            
+        }
+        else if (tag == "DragonRider")
+        {
+            lines = new[] { "Yo, I'm a Dragon Rider!", "Don't feel like talking to you right now! " };
+            nameLabel.text = "Dragon Rider";
+        }
 
         gameObject.SetActive(true);
         StartCoroutine(TypeLine());

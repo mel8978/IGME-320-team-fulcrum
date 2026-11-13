@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -72,10 +73,6 @@ public class InventoryManager : MonoBehaviour
     {
         Debug.Log("InventoryManager.AddItem");
 
-        if (itemSlots.Length == 0)
-        {
-            
-        }
         for (int i = 0; i < itemSlots.Length; i++)
         {
             if (itemSlots[i].isFull == false)
@@ -85,6 +82,20 @@ public class InventoryManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public bool FindItem(string name)
+    {
+        Debug.Log("Find item called");
+        for (int i = 0; i < itemSlots.Length; i++)
+        {
+            if (itemSlots[i].itemName == name)
+            {
+                Debug.Log("Found item");
+                return true;
+            }
+        }
+        return false;
     }
 
     public void DeselectAllSlots()
