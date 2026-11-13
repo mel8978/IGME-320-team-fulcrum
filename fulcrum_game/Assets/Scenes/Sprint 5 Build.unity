@@ -4808,7 +4808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -126.515015, y: 62.878212}
+  m_AnchoredPosition: {x: -126.51489, y: 62.878174}
   m_SizeDelta: {x: -553.03, y: -154.24359}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &891475228
@@ -7362,20 +7362,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.12
+      value: 1.46
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.146
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.27
+      value: 14.655
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9830732
+      value: 0.99403393
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7383,7 +7395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.1832133
+      value: 0.10907181
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalRotation.z
@@ -7395,7 +7407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 21.114
+      value: 12.524
       objectReference: {fileID: 0}
     - target: {fileID: 1048164195723885686, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7413,17 +7425,25 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Cheese
       objectReference: {fileID: 0}
+    - target: {fileID: 2825782622090160492, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5440842272539589787, guid: acad2b27c2581aa498bf805ddba781a7, type: 3}
     - target: {fileID: 7665821953462365509, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: ee939f2163c218e45a79797eece84dad, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1277046770619194519, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2520813485388530314, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1825155933}
+    - targetCorrespondingSourceObject: {fileID: 2520813485388530314, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825155938}
   m_SourcePrefab: {fileID: 100100000, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
 --- !u!1 &1825155932 stripped
 GameObject:
@@ -7445,7 +7465,7 @@ MonoBehaviour:
   itemName: Cheese
   quantity: 1
   sprite: {fileID: -4470592730861715767, guid: 8018ed3ced471e8478358e5a96a65b50, type: 3}
-  itemDescription: This is a piece of cheese
+  itemDescription: Huh... a random wedge of cheese on the ground. Hopefully someone's deserate enough for a bite to not care.
   itemLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -7453,6 +7473,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   thisCamera: {fileID: 1939982711}
+--- !u!64 &1825155938
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825155932}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5440842272539589787, guid: acad2b27c2581aa498bf805ddba781a7, type: 3}
 --- !u!1 &1830982117 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a5d2cb8a431cb8d4887cb58210045e68, type: 3}
