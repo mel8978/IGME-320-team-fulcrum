@@ -35,7 +35,7 @@ public class DefaultCanvasMenuManager : MonoBehaviour
             if (inventoryMenu.gameObject.activeSelf == false)
             {
                 inventoryMenu.OpenMenu();
-                hotbar.SetActive(false);
+                //hotbar.SetActive(false);
             }
             
         }
@@ -43,7 +43,7 @@ public class DefaultCanvasMenuManager : MonoBehaviour
         {
             if(inventoryMenu.gameObject.activeSelf == false && hotbar.activeSelf == false)
             {
-                hotbar.SetActive(true);
+                //hotbar.SetActive(true);
             }
         }
     }
