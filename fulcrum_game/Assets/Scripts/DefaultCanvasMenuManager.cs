@@ -21,30 +21,36 @@ public class DefaultCanvasMenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Use old input system to open menus
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Use old input system to open menus, if none are open already
+        if (PopupMenu.openMenus == 0)
         {
-            if(pauseMenu.gameObject.activeSelf == false)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                pauseMenu.OpenMenu();
+                if (pauseMenu.gameObject.activeSelf == false)
+                {
+                    pauseMenu.OpenMenu();
+                }
+
             }
+            else if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (inventoryMenu.gameObject.activeSelf == false)
+                {
+                    inventoryMenu.OpenMenu();
+                    //hotbar.SetActive(false);
+                }
+
+            }
+            /*
+            if (Input.GetMouseButtonUp(0))
+            {
+                if (inventoryMenu.gameObject.activeSelf == false && hotbar.activeSelf == false)
+                {
+                    //hotbar.SetActive(true);
+                }
+            }
+            */
+        }
             
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (inventoryMenu.gameObject.activeSelf == false)
-            {
-                inventoryMenu.OpenMenu();
-                //hotbar.SetActive(false);
-            }
-            
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            if(inventoryMenu.gameObject.activeSelf == false && hotbar.activeSelf == false)
-            {
-                //hotbar.SetActive(true);
-            }
-        }
     }
 }
