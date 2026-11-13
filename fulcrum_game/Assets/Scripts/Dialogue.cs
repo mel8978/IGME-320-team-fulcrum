@@ -10,6 +10,8 @@ public class Dialogue : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI textComponent;
     [SerializeField]
+    TextMeshProUGUI nameLabel;
+    [SerializeField]
     string[] lines;
     [SerializeField]
     float textSpeed;
@@ -53,19 +55,30 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
+                if(hit.collider.gameObject.tag == "Brunhilde")
+                {
+                    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
+                    nameLabel.text = "Brunhilde";
+                }
+                else if(hit.collider.gameObject.tag == "DragonRider")
+                {
+                    lines = new[] { "Yo, I'm a Dragon Rider!", "Don't feel like talking to you right now! " };
+                    nameLabel.text = "Dragon Rider";
+                }
                 StartDialogue();
             }
         }
+
     }
 
     void StartDialogue()
     {
-        //index = 0;
-        //textComponent.text = string.Empty;
+        index = 0;
+        textComponent.text = string.Empty;
 
-        //if(itemScript.inventory.Count == 0 && !givenCheese)
+        //if (itemScript.inventory.Count == 0 && !givenCheese)
         //{
-        //    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! "};
+        //    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
         //}
         //else if (givenCheese)
         //{
@@ -76,9 +89,9 @@ public class Dialogue : MonoBehaviour
         //    lines = new[] { "Thanks so much!" };
         //    givenCheese = true;
         //}
-        //gameObject.SetActive(true);
-        //StartCoroutine(TypeLine());
-        
+
+        gameObject.SetActive(true);
+        StartCoroutine(TypeLine());
     }
 
     IEnumerator TypeLine()
