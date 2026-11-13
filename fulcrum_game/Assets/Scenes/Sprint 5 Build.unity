@@ -1542,6 +1542,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 366117473}
     - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1197456869}
+    - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
       propertyPath: ItemDescriptionText
       value: 
       objectReference: {fileID: 635510320}
@@ -3172,6 +3176,10 @@ PrefabInstance:
       propertyPath: selectedShader
       value: 
       objectReference: {fileID: 1758792573}
+    - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+      propertyPath: inventoryManager
+      value: 
+      objectReference: {fileID: 1197456869}
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: thisItemSelected
       value: 0

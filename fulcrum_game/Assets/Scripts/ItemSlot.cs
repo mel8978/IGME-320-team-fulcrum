@@ -22,11 +22,12 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public GameObject selectedShader;
     public bool thisItemSelected;
 
+    [SerializeField]
     private InventoryManager inventoryManager;
-    
+
     void Start()
     {
-        inventoryManager = FindFirstObjectByType<InventoryManager>();
+
     }
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {

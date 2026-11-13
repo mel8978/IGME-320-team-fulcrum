@@ -14,7 +14,6 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         Debug.Log(itemSlots.Length);
-        itemSlots = InventoryMenu.GetComponentsInChildren<ItemSlot>(true);
     }
 
     // Update is called once per frame
@@ -72,6 +71,11 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         Debug.Log("InventoryManager.AddItem");
+
+        if (itemSlots.Length == 0)
+        {
+            
+        }
         for (int i = 0; i < itemSlots.Length; i++)
         {
             Debug.Log(itemSlots.Length);
