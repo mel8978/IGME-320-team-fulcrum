@@ -60,24 +60,24 @@ public class Dialogue : MonoBehaviour
 
     void StartDialogue()
     {
-        index = 0;
-        textComponent.text = string.Empty;
+        //index = 0;
+        //textComponent.text = string.Empty;
 
-        if(itemScript.inventory.Count == 0 && !givenCheese)
-        {
-            lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! "};
-        }
-        else if (givenCheese)
-        {
-            lines = new[] { "That cheese was delicious! " };
-        }
-        else
-        {
-            lines = new[] { "Thanks so much!" };
-            givenCheese = true;
-        }
-        gameObject.SetActive(true);
-        StartCoroutine(TypeLine());
+        //if(itemScript.inventory.Count == 0 && !givenCheese)
+        //{
+        //    lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! "};
+        //}
+        //else if (givenCheese)
+        //{
+        //    lines = new[] { "That cheese was delicious! " };
+        //}
+        //else
+        //{
+        //    lines = new[] { "Thanks so much!" };
+        //    givenCheese = true;
+        //}
+        //gameObject.SetActive(true);
+        //StartCoroutine(TypeLine());
         
     }
 

@@ -2355,8 +2355,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2520813485388530314, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825155933}
   m_SourcePrefab: {fileID: 100100000, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+--- !u!1 &1825155932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2520813485388530314, guid: 867c60220ce7b434c8a72ce839f0e2f3, type: 3}
+  m_PrefabInstance: {fileID: 1825155931}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1825155933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825155932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967fccc0af7ee004690e15af8e45cb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemName: Cheese
+  quantity: 1
+  sprite: {fileID: -4470592730861715767, guid: 8018ed3ced471e8478358e5a96a65b50, type: 3}
+  itemDescription: This is a piece of cheese
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  thisCamera: {fileID: 1939982711}
 --- !u!1 &1843497993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8677361225302940559, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
@@ -2696,8 +2727,8 @@ MonoBehaviour:
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1939982713}
-        m_TargetAssemblyTypeName: PickUpItem, Assembly-CSharp
+      - m_Target: {fileID: 1825155933}
+        m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: OnFire
         m_Mode: 0
         m_Arguments:
@@ -2809,7 +2840,8 @@ MonoBehaviour:
   targetLayer2:
     serializedVersion: 2
     m_Bits: 64
-  inventory: []
+  thisCamera: {fileID: 0}
+  inventory: {fileID: 0}
   cheese: {fileID: 0}
 --- !u!114 &1939982717 stripped
 MonoBehaviour:

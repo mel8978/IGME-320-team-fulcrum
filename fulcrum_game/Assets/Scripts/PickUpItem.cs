@@ -14,17 +14,14 @@ public class PickUpItem : MonoBehaviour
     [SerializeField]
     LayerMask targetLayer2;
 
-    public List<GameObject> inventory;
+    [SerializeField]
     Camera thisCamera;
 
     [SerializeField]
+    InventoryManager inventory;
+
+    [SerializeField]
     Image cheese;
-
-    private void Awake()
-    {
-        thisCamera = GetComponent<Camera>();
-
-    }
 
     public void OnFire(InputAction.CallbackContext context)
     {
@@ -38,7 +35,7 @@ public class PickUpItem : MonoBehaviour
             {
                 Debug.Log("Hit Item");
                 GameObject obj = hit.collider.gameObject;
-                inventory.Add(obj);
+                //inventory.AddItem(obj.name, 1, cheese, "This is cheese");
                 obj.SetActive(false);
             }
 
@@ -47,27 +44,25 @@ public class PickUpItem : MonoBehaviour
             {
                 Debug.Log("Hit NPC");
                 GameObject obj = hit.collider.gameObject;
-                if(inventory.Count!=0)
-                {
-                    inventory.Remove(inventory[inventory.Count-1]);  
-                }          
+                //
             }
         }
 
     }
-
-    private void Update()
-    {       
-        if (cheese == null) return;  // handle bug when there is no cheese in scene
-
-        if (inventory.Count != 0)
-        {
-
-            cheese.enabled = true;
-        }
-        else
-        {
-            cheese.enabled = false;
-        }
-    }
 }
+
+//    private void Update()
+//    {       
+//        if (cheese == null) return;  // handle bug when there is no cheese in scene
+
+//        if (inventory.Count != 0)
+//        {
+
+//            cheese.enabled = true;
+//        }
+//        else
+//        {
+//            cheese.enabled = false;
+//        }
+//    }
+//}
