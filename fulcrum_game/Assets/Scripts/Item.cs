@@ -41,14 +41,6 @@ public class Item : MonoBehaviour
                 inventoryManager.AddItem(itemName, 1, sprite, "This is cheese");
                 obj.SetActive(false);
             }
-
-            //transform.position, transform.forward
-            if (Physics.Raycast(raycast, out hit, 20, npcLayer))
-            {
-                Debug.Log("Hit NPC");
-                GameObject obj = hit.collider.gameObject;
-                //
-            }
         }
 
     }
