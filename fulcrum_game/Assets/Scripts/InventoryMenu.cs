@@ -7,11 +7,9 @@ using UnityEngine.UI;
 
 public class InventoryMenu : MonoBehaviour
 {
-    // Number of item boxes in the hotbar
-    [SerializeField] private int numItems;
-
     // Holds prefab for the item boxes in the hotbar
     [SerializeField] private GameObject itemBoxPrefab;
+    [SerializeField] private GameObject itemSelector;
     // Holds reference to grid layout
     [SerializeField] private GameObject itemBoxGrid;
 
@@ -20,19 +18,24 @@ public class InventoryMenu : MonoBehaviour
 
     private int selectedIndex;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start causes an error because it runs after OnEnable, so Awake is used instead
     void Start()
     {
+        selectedIndex = 0;
         itemBoxes = new List<GameObject>();
 
-        // Add numItems number of item boxes to the itemBoxes list, and assign as a child
-        for (int i = 0; i < numItems; i++)
+        // Populate list of item boxes
+        Transform[] descendants = itemBoxGrid.GetComponentsInChildren<Transform>();
+        foreach (Transform childTransform in descendants)
         {
-            GameObject itemBox = Instantiate(itemBoxPrefab, itemBoxGrid.transform);
-            itemBoxes.Add(itemBox);
-        }
+            GameObject child = childTransform.gameObject;
 
-        selectedIndex = 0;
+            // If a child shares a name with the provided item box prefab, add it
+            if (child.name == itemBoxPrefab.name)
+            {
+                itemBoxes.Add(child);
+            }
+        }
 
         // Force layout to recompute and update selector box position
         LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform);
@@ -43,12 +46,26 @@ public class InventoryMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Add game logic here
+        // Add selection functionality here?
+    }
+
+    // This code might not be necessary. Ideally would rebuild and update menu
+    // every time it is displayed onscreen
+    private void OnEnable()
+    {
+        // Force layout to recompute and update selector box position
+        LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform);
+        // Make sure item selector is in the correct spot when the menu is shown
+        UpdateSelected();
     }
 
     private void UpdateSelected()
     {
-        // Add behavior for re-selecting inventory items here
+        // Add selection behavior here?
+        /*
+        Vector3 targetPosition = itemBoxes[selectedIndex].transform.position;
+        itemSelector.transform.position = targetPosition;
+        */
     }
 
     public int GetSelectedIndex()
@@ -58,6 +75,6 @@ public class InventoryMenu : MonoBehaviour
 
     public int GetNumItems()
     {
-        return numItems;
+        return itemBoxes.Count;
     }
 }
