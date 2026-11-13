@@ -188,7 +188,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1681174045}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PickUpItem, Assembly-CSharp
         m_MethodName: OnFire
         m_Mode: 0
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 398784267}
   - component: {fileID: 398784266}
   - component: {fileID: 398784265}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 537316993}
   - component: {fileID: 537316992}
   - component: {fileID: 537316994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,6 +687,13 @@ MonoBehaviour:
   quantity: 0
   sprite: {fileID: -8664231047125601921, guid: 076c157b38e1f484b913ba06c20cd6e5, type: 3}
   itemDescription: testing things
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  thisCamera: {fileID: 1681174047}
 --- !u!1001 &640503596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1886,7 +1893,7 @@ GameObject:
   - component: {fileID: 968774705}
   - component: {fileID: 968774704}
   - component: {fileID: 968774703}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2070,6 +2077,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1072128219248415819, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
   m_PrefabInstance: {fileID: 9161143851212016636}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1339692509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5783232207561370028, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+  m_PrefabInstance: {fileID: 9161143851212016636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!114 &1418854460 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
@@ -2092,7 +2110,7 @@ GameObject:
   - component: {fileID: 1424243800}
   - component: {fileID: 1424243799}
   - component: {fileID: 1424243798}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Item (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2115,6 +2133,13 @@ MonoBehaviour:
   quantity: 0
   sprite: {fileID: -8664231047125601921, guid: 076c157b38e1f484b913ba06c20cd6e5, type: 3}
   itemDescription: i am different
+  itemLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 72
+  thisCamera: {fileID: 1681174047}
 --- !u!65 &1424243799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2256,31 +2281,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!1 &1681174040 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2502257023710851685, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
+--- !u!20 &1681174047 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5695674445560437733, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
   m_PrefabInstance: {fileID: 729745166055462910}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1681174045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681174040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5069ecf151448b4cba98d2feeb57a70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  targetLayer1:
-    serializedVersion: 2
-    m_Bits: 8
-  targetLayer2:
-    serializedVersion: 2
-    m_Bits: 64
-  itemText: {fileID: 894151605}
-  inventory: []
 --- !u!1 &1700705145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,9 +3224,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 270643372471341730, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
       insertIndex: -1
       addedObject: {fileID: 259285271}
-    - targetCorrespondingSourceObject: {fileID: 2502257023710851685, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1681174045}
   m_SourcePrefab: {fileID: 100100000, guid: 6950e36bee5aca34ea9410ec4d969199, type: 3}
 --- !u!1001 &1088334420703644859
 PrefabInstance:
@@ -3364,7 +3366,7 @@ PrefabInstance:
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: itemImage
       value: 
-      objectReference: {fileID: 1700705147}
+      objectReference: {fileID: 1339692509}
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: ItemNameText
       value: 
@@ -3392,6 +3394,10 @@ PrefabInstance:
     - target: {fileID: 2980195059959502043, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: m_Name
       value: InventorySlots
+      objectReference: {fileID: 0}
+    - target: {fileID: 3553247104815887632, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+      propertyPath: m_Name
+      value: ItemImage1
       objectReference: {fileID: 0}
     - target: {fileID: 5770906695825085677, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: m_AnchorMax.y

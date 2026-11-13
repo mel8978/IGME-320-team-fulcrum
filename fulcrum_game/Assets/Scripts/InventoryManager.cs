@@ -73,6 +73,7 @@ public class InventoryManager : MonoBehaviour
         Debug.Log("InventoryManager.AddItem");
         for (int i = 0; i < itemSlots.Length; i++)
         {
+            Debug.Log(itemSlots.Length);
             if (itemSlots[i].isFull == false)
             {
                 itemSlots[i].AddItem(itemName, quantity, itemSprite, itemDescription);
