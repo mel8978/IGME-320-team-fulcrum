@@ -2110,6 +2110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &784460292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5783232207561370028, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+  m_PrefabInstance: {fileID: 2040115669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &799270348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,7 +3300,7 @@ PrefabInstance:
     - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
       propertyPath: itemImage
       value: 
-      objectReference: {fileID: 1990437158}
+      objectReference: {fileID: 1963929497}
     - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
       propertyPath: ItemNameText
       value: 
@@ -4161,6 +4172,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1963929497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 845084602442043392, guid: f1eb93e420868bc428c0643fde173246, type: 3}
+  m_PrefabInstance: {fileID: 1745057328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1990437156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,7 +4339,7 @@ PrefabInstance:
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: itemImage
       value: 
-      objectReference: {fileID: 1990437158}
+      objectReference: {fileID: 784460292}
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: ItemNameText
       value: 
