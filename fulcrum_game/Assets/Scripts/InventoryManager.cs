@@ -13,7 +13,8 @@ public class InventoryManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Debug.Log(itemSlots.Length);
+        itemSlots = InventoryMenu.GetComponentsInChildren<ItemSlot>(true);
     }
 
     // Update is called once per frame
