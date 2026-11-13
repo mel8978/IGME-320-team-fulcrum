@@ -103,6 +103,7 @@ public class Dialogue : MonoBehaviour
         }
 
         gameObject.SetActive(true);
+        PopupMenu.openMenus++;
         StartCoroutine(TypeLine());
     }
 
@@ -125,6 +126,7 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            PopupMenu.openMenus--;
             gameObject.SetActive(false);
         }
     }

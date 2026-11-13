@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PopupMenu : MonoBehaviour
 {
     // Tracks number of open popup menus across all instances
-    static int openMenus = 0;
+    public static int openMenus = 0;
 
     // Hide this menu and disable cursor
     public void CloseMenu()
@@ -31,6 +32,7 @@ public class PopupMenu : MonoBehaviour
 
         // Enable the menu
         gameObject.SetActive(true);
+
         // Add to total number of open menus
         openMenus++;
         // Enable cursor, if necessary

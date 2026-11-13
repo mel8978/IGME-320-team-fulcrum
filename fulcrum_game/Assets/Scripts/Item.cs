@@ -38,20 +38,10 @@ public class Item : MonoBehaviour
             {
                 Debug.Log("Hit Item");
                 GameObject obj = hit.collider.gameObject;
-                inventoryManager.AddItem(itemName, 1, sprite, "This is cheese");
+                inventoryManager.AddItem(itemName, 1, sprite, itemDescription);
                 obj.SetActive(false);
             }
         }
 
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("hit");
-            inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
-            Destroy(gameObject);
-        }
     }
 }

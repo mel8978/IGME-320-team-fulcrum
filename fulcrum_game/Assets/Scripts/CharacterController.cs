@@ -29,6 +29,12 @@ public class CharacterController : MonoBehaviour
         // further set it with (Edit, Project Settings, Input)
         translation = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         straffe = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+
+        if(PopupMenu.openMenus != 0)
+        {
+            translation = 0;
+            straffe = 0;
+        }
         transform.Translate(straffe, 0, translation);
 
         if (Input.GetKeyDown("escape"))
