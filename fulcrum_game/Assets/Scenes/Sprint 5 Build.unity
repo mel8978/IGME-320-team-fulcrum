@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 196551403}
   - component: {fileID: 196551402}
   - component: {fileID: 196551401}
+  - component: {fileID: 196551404}
   m_Layer: 5
   m_Name: InventoryDescription
   m_TagString: Untagged
@@ -460,15 +461,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.15686275}
+  m_Color: {r: 0.9215687, g: 0.86274517, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 33a1000b3ae447a4aa4a0760ccdc4062, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -485,6 +486,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196551399}
   m_CullTransparentMesh: 1
+--- !u!114 &196551404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196551399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0.20784315, g: 0.08627451, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &199129948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2021,15 +2037,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4599ed694ef984549872c97260200e15, type: 2}
+  m_sharedMaterial: {fileID: -1108503732443738460, guid: 4599ed694ef984549872c97260200e15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.20784315, g: 0.08627451, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2046,8 +2062,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 25.6
+  m_fontSizeBase: 25.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2110,6 +2126,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &784460292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5783232207561370028, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+  m_PrefabInstance: {fileID: 2040115669}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &799270348
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,15 +2363,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 112a8f99714ec55459e19b4220d792a4, type: 2}
+  m_sharedMaterial: {fileID: -6454661227424778356, guid: 112a8f99714ec55459e19b4220d792a4, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.20784315, g: 0.08627451, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2361,8 +2388,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2427,6 +2454,7 @@ GameObject:
   - component: {fileID: 891475229}
   - component: {fileID: 891475228}
   - component: {fileID: 891475231}
+  - component: {fileID: 891475232}
   m_Layer: 5
   m_Name: InventoryMenu
   m_TagString: Untagged
@@ -2495,15 +2523,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9419296, b: 0.7857142, a: 0.15686275}
+  m_Color: {r: 0.8352942, g: 0.7372549, b: 0.52156866, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 33a1000b3ae447a4aa4a0760ccdc4062, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2532,6 +2560,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b22ddf55f692af4787a16ce7e6c5f37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PopupMenu
+--- !u!114 &891475232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891475226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0.20784315, g: 0.08627451, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!114 &903379547 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8115110662366809400, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
@@ -2625,6 +2668,7 @@ GameObject:
   - component: {fileID: 1115729852}
   - component: {fileID: 1115729851}
   - component: {fileID: 1115729850}
+  - component: {fileID: 1115729853}
   m_Layer: 5
   m_Name: ItemDescription
   m_TagString: Untagged
@@ -2692,15 +2736,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.9215687, g: 0.86274517, b: 0.67058825, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 33a1000b3ae447a4aa4a0760ccdc4062, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2717,6 +2761,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115729848}
   m_CullTransparentMesh: 1
+--- !u!114 &1115729853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115729848}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0.20784315, g: 0.08627451, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1242786992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,7 +3348,7 @@ PrefabInstance:
     - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
       propertyPath: itemImage
       value: 
-      objectReference: {fileID: 1990437158}
+      objectReference: {fileID: 1963929497}
     - target: {fileID: 6485028900007001038, guid: f1eb93e420868bc428c0643fde173246, type: 3}
       propertyPath: ItemNameText
       value: 
@@ -4166,6 +4225,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1963929497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 845084602442043392, guid: f1eb93e420868bc428c0643fde173246, type: 3}
+  m_PrefabInstance: {fileID: 1745057328}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &1990437156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4216,7 +4286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4322,7 +4392,7 @@ PrefabInstance:
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: itemImage
       value: 
-      objectReference: {fileID: 1990437158}
+      objectReference: {fileID: 784460292}
     - target: {fileID: 146102650972258914, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: ItemNameText
       value: 
@@ -4382,6 +4452,18 @@ PrefabInstance:
     - target: {fileID: 5783232207561370028, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: m_Color.a
       value: 0.15686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053598866779740995, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6053598866779740995, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 33a1000b3ae447a4aa4a0760ccdc4062, type: 3}
+    - target: {fileID: 6053598866779740995, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7986671506148380070, guid: fc49806b3f0ca084b9f360bfd8b27f3b, type: 3}
       propertyPath: m_Pivot.x
