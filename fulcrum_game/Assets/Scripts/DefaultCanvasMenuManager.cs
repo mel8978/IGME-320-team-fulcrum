@@ -4,6 +4,8 @@ public class DefaultCanvasMenuManager : MonoBehaviour
 {
     [SerializeField] private PopupMenu pauseMenu;
     [SerializeField] private PopupMenu inventoryMenu;
+
+    [SerializeField] private PopupMenu demoEndMenu;
     [SerializeField] private GameObject hotbar;
 
     // Reset number of menus on awake
@@ -51,6 +53,8 @@ public class DefaultCanvasMenuManager : MonoBehaviour
             }
             */
         }
+
+        // If the demo is over, close all menus and show the demo end menu.
             
     }
 }
