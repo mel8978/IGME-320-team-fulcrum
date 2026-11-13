@@ -2203,6 +2203,18 @@ PrefabInstance:
       value: -248
       objectReference: {fileID: 0}
     - target: {fileID: 7331285417270437918, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
+      propertyPath: dialogue
+      value: 
+      objectReference: {fileID: 1843497998}
+    - target: {fileID: 7331285417270437918, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
+      propertyPath: demoEndMenu
+      value: 
+      objectReference: {fileID: 2027018845}
+    - target: {fileID: 7331285417270437918, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1843497993}
+    - target: {fileID: 7331285417270437918, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
       propertyPath: inventoryMenu
       value: 
       objectReference: {fileID: 891475231}
@@ -7972,6 +7984,7 @@ MonoBehaviour:
   nameLabel: {fileID: 694116931}
   lines: []
   textSpeed: 0.05
+  demoOver: 0
   itemScript: {fileID: 1939982713}
   inv: {fileID: 2087281055}
   npcLayer:
@@ -9043,6 +9056,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5423646865682890089, guid: c88801a623a84ef46a95255d84fa7391, type: 3}
+--- !u!114 &2027018845 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7132738899490172993, guid: 36e47a62d88194e44ac3dc9b5c637bac, type: 3}
+  m_PrefabInstance: {fileID: 328037470}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b22ddf55f692af4787a16ce7e6c5f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &2040115669
 PrefabInstance:
   m_ObjectHideFlags: 0

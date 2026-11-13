@@ -15,6 +15,8 @@ public class Dialogue : MonoBehaviour
     string[] lines;
     [SerializeField]
     float textSpeed;
+    
+    public bool demoOver; // for tracking demo progress
 
     string tag;
     bool givenCheese = false;
@@ -34,6 +36,7 @@ public class Dialogue : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        demoOver = false;
         gameObject.SetActive(false);
     }
 
@@ -59,7 +62,9 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
-                if(hit.collider.gameObject.tag == "Brunhilde")
+                if (demoOver) { return; } // Don't allow dialogue if demo is over
+
+                if (hit.collider.gameObject.tag == "Brunhilde")
                 {
                     tag = "Brunhilde";
                 }
@@ -84,6 +89,7 @@ public class Dialogue : MonoBehaviour
             {
                 lines = new[] { "Woah, thanks for the Cheese!" };
                 givenCheese = true;
+                demoOver = true;
             }
             else if(givenCheese)
             {
