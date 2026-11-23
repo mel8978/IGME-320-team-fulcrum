@@ -18,7 +18,9 @@ public class Dialogue : MonoBehaviour
     
     public bool demoOver; // for tracking demo progress
 
-    string tag;
+    string characterTag;
+    int brunCount;
+    int ryderCount;
     bool givenCheese = false;
 
     [SerializeField]
@@ -37,6 +39,8 @@ public class Dialogue : MonoBehaviour
     void Start()
     {
         demoOver = false;
+        brunCount = 0;
+        ryderCount = 0;
         gameObject.SetActive(false);
     }
 
@@ -66,11 +70,11 @@ public class Dialogue : MonoBehaviour
 
                 if (hit.collider.gameObject.tag == "Brunhilde")
                 {
-                    tag = "Brunhilde";
+                    characterTag = "Brunhilde";
                 }
                 else if(hit.collider.gameObject.tag == "DragonRider")
                 {
-                    tag = "DragonRider";
+                    characterTag = "DragonRider";
                 }
                 StartDialogue();
             }
@@ -83,7 +87,7 @@ public class Dialogue : MonoBehaviour
         index = 0;
         textComponent.text = string.Empty;
 
-        if (tag == "Brunhilde")
+        if (characterTag == "Brunhilde")
         {
             if(inv.FindItem("Cheese") && !givenCheese)
             {
@@ -95,17 +99,30 @@ public class Dialogue : MonoBehaviour
             {
                 lines = new[] { "Thanks again for the cheese!" };
             }
+            else if(brunCount >= 1 && !givenCheese)
+            {
+                lines = new[] { "Um.. I don't think this is cheese?", "Please let me know if you find cheese!" };
+            }
             else
             {
                 lines = new[] { "Hi, could you find me some cheese?", "I'll be waiting! " };
             }
             nameLabel.text = "Brunhilde";
-            
+            brunCount++;
+
         }
-        else if (tag == "DragonRider")
+        else if (characterTag == "DragonRider")
         {
-            lines = new[] { "Yo, I'm a Dragon Rider!", "Don't feel like talking to you right now! " };
-            nameLabel.text = "Dragon Rider";
+            if(ryderCount == 0)
+            {
+                lines = new[] { "Yo, I'm a Ryder the Dragon!", "Don't feel like talking to you right now!" };
+            }
+            else
+            {
+                lines = new[] { "Not talking!!!!", "Go away!!!!" };
+            }
+            ryderCount++;
+            nameLabel.text = "Ryder(Dragon)";
         }
 
         gameObject.SetActive(true);
