@@ -8525,7 +8525,7 @@ MonoBehaviour:
   itemName: Cheese
   quantity: 1
   sprite: {fileID: -4470592730861715767, guid: 8018ed3ced471e8478358e5a96a65b50, type: 3}
-  itemDescription: Huh... a random wedge of cheese on the ground. Hopefully someone's deserate enough for a bite to not care.
+  itemDescription: Huh... a random wedge of cheese on the ground. Hopefully someone's desperate enough for a bite to not care.
   itemLayer:
     serializedVersion: 2
     m_Bits: 8

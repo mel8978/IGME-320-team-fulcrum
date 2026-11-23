@@ -38,10 +38,16 @@ public class DefaultCanvasMenuManager : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.E))
             {
+                Debug.Log(inventoryMenu.gameObject.activeSelf);
                 if (inventoryMenu.gameObject.activeSelf == false)
                 {
+                    Debug.Log("open inventory");
                     inventoryMenu.OpenMenu();
                     //hotbar.SetActive(false);
+                } else if (inventoryMenu.gameObject.activeSelf)
+                {
+                    Debug.Log("called close menuy");
+                    inventoryMenu.CloseMenu();
                 }
 
             }
@@ -57,11 +63,12 @@ public class DefaultCanvasMenuManager : MonoBehaviour
         }
 
         // If the demo is over, close all menus and show the demo end menu.
+        /*
         if (dialogueBox.activeSelf == false && dialogue.demoOver)
         {
             pauseMenu.CloseMenu();
             inventoryMenu.CloseMenu();
             demoEndMenu.OpenMenu();
-        }
+        } */
     }
 }

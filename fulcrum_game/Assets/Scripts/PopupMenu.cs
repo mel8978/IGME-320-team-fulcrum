@@ -11,6 +11,7 @@ public class PopupMenu : MonoBehaviour
     {
         // Skip if menu is already closed
         if (!gameObject.activeSelf) { return; }
+        Debug.Log("got past if in close menu");
 
         // Remove from total number of open menus
         openMenus--;
